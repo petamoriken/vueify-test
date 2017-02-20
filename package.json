@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "vueify-test",
+  "version": "1.0.0",
+  "author": "Kenta Moriuchi (http://moriken.kimamass.com/)",
+  "main": "index.js",
+  "license": "MIT",
+  "browser": {
+    "vue": "vue/dist/vue"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "envify": "^4.0.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-flexbugs-fixes": "^2.1.0",
+    "postcss-import": "^9.1.0",
+    "vue": "^2.1.10",
+    "vueify": "^9.4.0"
+  },
+  "scripts": {
+    "clean": "rm -rf build",
+    "build": "yarn run mkdirp && yarn run js && yarn run html",
+    "mkdirp": "mkdir -p build",
+    "js": "gulp js",
+    "html": "cp src/index.html build/index.html"
+  }
+}
